@@ -12,11 +12,10 @@ const movies = {
     });
   },
   new: (req, res) => {
-    db.Movie.findAll({ order: [["release_date", "DESC"]] }).then(
-      (respuesta) => {
-        res.render("moviesList", { movies: respuesta });
-      }
-    );
+    const orderBy = { order: [["release_date", "DESC"]] };
+    db.Movie.findAll(orderBy).then((respuesta) => {
+      res.render("moviesList", { movies: respuesta });
+    });
   },
   recomended: (req, res) => {
     db.Movie.findAll({ order: [["rating", "DESC"]] }).then((resultado) => {

@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "description": "Pequeña práctica sobre implementar el uso de una base de datos a un proyecto de Express, utilizando como herramienta Sequelize para lograr dicho cometido",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/app.js"
